@@ -1,6 +1,7 @@
 import React from 'react';
 
 // components
+import Footer from './Footer';
 
 // styles
 import '../styles/App.scss';
@@ -8,7 +9,7 @@ import '../styles/App.scss';
 function App() {
   return (
     <React.Fragment>
-      <div>Holi</div>
+      <Footer />
     </React.Fragment>
   );
 }
