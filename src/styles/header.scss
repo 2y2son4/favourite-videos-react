@@ -1,0 +1,21 @@
+.header {
+  &-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 24px auto 0;
+  }
+
+  &-title-text {
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &-button-add {
+    margin-right: 24px;
+  }
+}
