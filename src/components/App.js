@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import Header from './Header';
+import List from './List';
 import Footer from './Footer';
 
 // styles
@@ -10,7 +10,7 @@ import '../styles/App.scss';
 function App() {
   return (
     <React.Fragment>
-      <Header />
+      <List />
       <Footer />
     </React.Fragment>
   );

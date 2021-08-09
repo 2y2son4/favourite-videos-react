@@ -1,0 +1,27 @@
+/** List **/
+
+.preview {
+  &-image {
+    width: 100%;
+    user-select: none;
+    animation: blureffect 1s ease-in;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &-title {
+    padding: 10px;
+  }
+}
+
+/* Zoom in Keyframes */
+@keyframes blureffect {
+  0% {
+    filter: blur(10px);
+  }
+  50% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
