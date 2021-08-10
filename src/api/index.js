@@ -60,6 +60,7 @@ export const getVideos = () =>
     }, FAKE_DELAY);
   });
 
+// Return a description from server
 const getDescription = async () => {
   try {
     const resp = await fetch('https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1');
