@@ -16,9 +16,9 @@ class List extends Component {
     this.setState({ isLoading: true });
 
     // Promises example
-    getVideos()
-      .then((data) => this.setState({ videos: data, isLoading: false }))
-      .catch((error) => this.setState({ error, isLoading: false }));
+    // getVideos()
+    //   .then(data => this.setState({ videos: data, isLoading: false }))
+    //   .catch(error => this.setState({ error, isLoading: false }));
 
     try {
       const videos = await getVideos();
@@ -30,7 +30,7 @@ class List extends Component {
   render() {
     const { videos, isLoading, error } = this.state;
     if (isLoading) {
-      return <Loader message='Cargando ...' />;
+      return <Loader />;
     }
     if (error) {
       return <p className='error'>{error.message}</p>;

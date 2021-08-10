@@ -5,7 +5,11 @@ import '../styles/loader.scss';
 
 class Loader extends Component {
   render() {
-    return <div className='loader'>{this.props.message || 'Loading...'}</div>;
+    return (
+      <div className='loader'>
+        <div className='loader-text'>{this.props.message || 'Loading...'}</div>
+      </div>
+    );
   }
 }
 
