@@ -7,15 +7,17 @@
     line-height: 1.6em;
     color: #3a3a3a;
     text-rendering: optimizeLegibility;
-    font-smooth: antialiased;
   }
+
   &-summary {
     padding: 0 10px;
   }
+
   &-summary p {
     text-indent: 0;
     margin: 0 0 26px 0;
   }
+
   &-title {
     margin: 52px 0 26px 0;
     font-size: 31px;
