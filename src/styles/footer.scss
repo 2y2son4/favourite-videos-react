@@ -1,13 +1,16 @@
 .footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 36px;
+  background-color: #d6006b;
   padding: 5px;
   text-align: center;
 
   &__span {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
-    color: #d6006b;
+    color: #79db75;
 
     &--link {
       color: #79db75;

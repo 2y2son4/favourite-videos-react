@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fabada;
 }
 
 code {
@@ -52,7 +54,7 @@ textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
@@ -64,31 +66,10 @@ textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-}
-
-input[type='submit'],
-input[type='button'] {
-  background-color: #4caf50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: block;
-  margin-top: 6px;
-
-  &:hover {
-    background-color: #45a049;
-  }
-
-  &:disabled {
-    background-color: #cccccc;
-    color: #666666;
-  }
 }
 
 .modal-content {

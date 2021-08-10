@@ -23,7 +23,7 @@ class Detail extends Component {
     const { match } = this.props;
 
     if (error) return <p className='error'>{error.message}</p>;
-    if (isLoading) return <Loader message={`Cargando video (#${match.params.id}) .... `} speed={15} />;
+    if (isLoading) return <Loader message={`Cargando video #${match.params.id}`} speed={15} />;
 
     return (
       <React.Fragment>
