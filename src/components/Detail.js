@@ -14,7 +14,7 @@ class Detail extends Component {
   componentDidMount() {
     const { match } = this.props;
     this.setState({ isLoading: true });
-    getVideoDetail({ idVideo: this.props.match.params.id })
+    getVideoDetail({ idVideo: match.params.id })
       .then((data) => this.setState({ video: data, isLoading: false }))
       .catch((err) => this.setState({ error: err, isLoading: false }));
   }
