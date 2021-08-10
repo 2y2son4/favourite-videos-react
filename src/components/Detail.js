@@ -8,7 +8,7 @@ class Detail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: false,
+      isLoading: true,
     };
   }
   componentDidMount() {
@@ -20,8 +20,10 @@ class Detail extends Component {
   }
   render() {
     const { isLoading, error, video } = this.state;
+    const { match } = this.props;
+
     if (error) return <p className='error'>{error.message}</p>;
-    if (isLoading || !video) return <Loader message={`Loading video #${this.props.match.params.id} ... `} />;
+    if (isLoading) return <Loader message={`Cargando video (#${match.params.id}) .... `} speed={15} />;
 
     return (
       <React.Fragment>
