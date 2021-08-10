@@ -60,6 +60,16 @@ export const getVideos = () =>
     }, FAKE_DELAY);
   });
 
+// export const getCharacters = async () => {
+//   try {
+//     const resp = await fetch('https://rickandmortyapi.com/api/character/');
+//     console.log(resp.json());
+//     return resp.json();
+//   } catch (error) {
+//     throw error;
+//   }
+// };
+
 // Return a description from server
 const getDescription = async () => {
   try {

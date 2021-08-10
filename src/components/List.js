@@ -12,6 +12,8 @@ class List extends Component {
       error: null,
     };
   }
+
+  // hacer asíncrono componentDidMount no bloquea el ciclo de vida, porque el componentDidMount no tiene return, no afecta que sea una promesa. PASARÁ CUANDO PASE.
   async componentDidMount() {
     this.setState({ isLoading: true });
 
