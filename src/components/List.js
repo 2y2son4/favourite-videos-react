@@ -3,6 +3,7 @@ import { getVideos } from '../api';
 import Loader from './Loader';
 import Item from './Item';
 import Header from './Header';
+import Footer from './Footer';
 class List extends Component {
   constructor(props) {
     super(props);
@@ -48,6 +49,7 @@ class List extends Component {
               })}
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

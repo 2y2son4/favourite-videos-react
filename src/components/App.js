@@ -1,19 +1,13 @@
-import React from 'react';
-
-// components
-import List from './List';
-import Footer from './Footer';
+import React, { Component } from 'react';
+import Root from './Root';
 
 // styles
 import '../styles/App.scss';
 
-function App() {
-  return (
-    <React.Fragment>
-      <List />
-      <Footer />
-    </React.Fragment>
-  );
+class App extends Component {
+  render() {
+    return <Root />;
+  }
 }
 
 export default App;
