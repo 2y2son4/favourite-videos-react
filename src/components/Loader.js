@@ -8,6 +8,9 @@ class Loader extends Component {
     return (
       <div className='loader'>
         <div className='loader-text'>{this.props.message || 'Loading...'}</div>
+        <div className='loader-spinner'>
+          <i class='zmdi zmdi-spinner zmdi-hc-spin'></i>
+        </div>
       </div>
     );
   }
