@@ -70,18 +70,28 @@ const getDescription = async () => {
   }
 };
 
+// difference between async/await y new promosises: way to manage errors.
+// cuando se hace return en una función asíncrona, el resultado es una promesa.
+
 export const getVideoDetail = ({ idVideo }) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       const video = FAKE_DATA.find((el) => parseInt(el.id) === parseInt(idVideo));
-      // Something goes wrong
-      if (!video) return reject({ message: 'No se ha encontrado el video ;(' });
+
+      // Something goes wrong (se devuelve una promesa no cumplida)
+      if (!video) return reject({ message: 'No se ha encontrado el video 🙄' });
+
       // All is ok
       if (video.description) return resolve(video);
-      //In case video don't have text description
-      return getDescription().then((description) => {
-        video.description = description.join();
-        return resolve(video);
-      });
+
+      // In case video don't have text description
+      return getDescription()
+        .then((description) => {
+          video.description = description.join();
+
+          // respuesta satisfactoria
+          return resolve(video);
+        })
+        .catch(console.error);
     }, FAKE_DELAY);
   });
