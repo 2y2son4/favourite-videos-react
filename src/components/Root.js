@@ -6,11 +6,9 @@ import About from './About';
 
 const Root = () => (
   <BrowserRouter>
-    <Switch>
-      <Route exact path='/' component={List} />
-      <Route exact path='/about' component={About} />
-      <Route exact path='/:id' component={Detail} />
-    </Switch>
+    <Route exact path='/' component={List} />
+    <Route exact path='/about' component={About} />
+    <Route exact path='/:id' component={Detail} />
   </BrowserRouter>
 );
 
