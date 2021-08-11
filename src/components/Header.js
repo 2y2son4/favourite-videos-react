@@ -8,9 +8,16 @@ const Header = () => (
   <div className='header-content'>
     <div className='header-title-text'>Favourite videos</div>
     <div>
-      <input type='button' value='Añadir Video' className='header-button-add' />
+      <div className='header-button-add'>
+        <i className='zmdi zmdi-plus'></i>
+        <span>Add 📼</span>
+      </div>
       <Link to='/about'>
-        <div className='header-button-about'>About</div>
+        <div className='header-button-about'>
+          {' '}
+          <i className='zmdi zmdi-more'></i>
+          <span>About 👩‍💻</span>
+        </div>
       </Link>
     </div>
   </div>

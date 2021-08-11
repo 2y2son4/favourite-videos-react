@@ -24,27 +24,57 @@
   &-button {
     &-add,
     &-about {
+      position: fixed;
+      bottom: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 0 5px 0px #333;
+      transition: 0.3s all cubic-bezier(0.68, -0.12, 0.78, 1.6);
       font-size: 18px;
       color: white;
       background-color: #d6006b;
       padding: 12px;
       border: none;
-      border-radius: 10px;
       cursor: pointer;
 
       &:hover {
         background-color: #79db75;
+        border-radius: 10px;
+        width: 120px;
+        span {
+          display: initial;
+        }
+        i {
+          display: none;
+        }
       }
 
       &:disabled {
         background-color: #cccccc;
         color: #666666;
       }
+
+      > i {
+        font-size: 24px;
+      }
+
+      > span {
+        display: none;
+      }
+    }
+
+    &-add {
+      left: 36px;
     }
 
     &-about {
       background-color: darkblue;
-      margin-right: 24px;
+      right: 36px;
     }
   }
 }
