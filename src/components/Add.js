@@ -66,9 +66,6 @@ class Add extends PureComponent {
             <span className='close' onClick={onClose(false)}>
               <i className='zmdi zmdi-close'></i>
             </span>
-            {showSending
-              ? showSending && <span className='success'> Saving .... </span>
-              : hasError && <div className='error'> Some fields are empty or contain wrong values. </div>}
           </div>
           <form>
             <label>Title</label>
@@ -84,6 +81,10 @@ class Add extends PureComponent {
             <input type='text' value={url} onChange={this.handleChange('url')} minLength='3' maxLength='200' required />
             <label>Description</label>
             <textarea value={description} onChange={this.handleChange('description')} required />
+
+            {showSending
+              ? showSending && <span className='success'> Saving .... </span>
+              : hasError && <div className='error'> Some fields are empty or contain wrong values. </div>}
 
             <div className='modal-button-submit'>
               <input type='submit' onClick={this.handleSubmit} value='Submit' disabled={showSending} />

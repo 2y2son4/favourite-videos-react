@@ -1,40 +1,97 @@
-/** MODAL **/
-/* The Modal (background) */
 .modal {
   display: block;
-  position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
+  position: fixed;
+  z-index: 2;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 
   &-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 24px;
     border: 1px solid #888;
     border-radius: 20px;
     box-shadow: #d6006b 0px 0px 0px 3px, #ff1a8c 0px 0px 0px 6px, #ff66b3 0px 0px 0px 9px, #ffb3d9 0px 0px 0px 12px,
       #ffe6f2 0px 0px 0px 15px;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
 
     &-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
 
       > h2 {
         margin: 8px 0;
       }
     }
   }
+
+  &-button-submit {
+    border: none;
+    background-color: #d6006b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0px #333;
+    transition: 0.5s all cubic-bezier(0.68, -0.12, 0.78, 1.6);
+    font-size: 18px;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    &:hover {
+      background-color: #79db75;
+      border-radius: 10px;
+      width: 120px;
+
+      span {
+        display: initial;
+      }
+
+      i {
+        display: none;
+      }
+    }
+
+    &:disabled {
+      background-color: #cccccc;
+      color: #666666;
+    }
+
+    > i {
+      font-size: 24px;
+      transition: 0.5s all ease;
+    }
+
+    > span {
+      display: none;
+      transition: 0.5s all ease;
+    }
+
+    > input {
+      opacity: 0;
+      position: absolute;
+      cursor: pointer;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
 }
 
-/* Modal Content/Box */
 label {
   display: block;
   font-weight: bold;
@@ -64,7 +121,6 @@ textarea {
   resize: vertical;
 }
 
-/* The Close Button */
 .close {
   color: #aaa;
   font-size: 28px;
@@ -86,61 +142,17 @@ textarea {
   }
 }
 
-.modal-button-submit {
-  border: none;
-  background-color: #d6006b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0 0 5px 0px #333;
-  transition: 0.5s all cubic-bezier(0.68, -0.12, 0.78, 1.6);
-  font-size: 18px;
-  color: white;
-  padding: 12px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
+.error,
+.success {
+  background-color: #fabada;
+  border-radius: 5px;
+  color: #d6006b;
+  margin: 0 auto 16px;
+  padding: 6px;
+  text-align: center;
+  width: fit-content;
+}
 
-  &:hover {
-    background-color: #79db75;
-    border-radius: 10px;
-    width: 120px;
-
-    span {
-      display: initial;
-    }
-
-    i {
-      display: none;
-    }
-  }
-
-  &:disabled {
-    background-color: #cccccc;
-    color: #666666;
-  }
-
-  > i {
-    font-size: 24px;
-    transition: 0.5s all ease;
-  }
-
-  > span {
-    display: none;
-    transition: 0.5s all ease;
-  }
-
-  > input {
-    opacity: 0;
-    position: absolute;
-    cursor: pointer;
-    width: fit-content;
-    height: fit-content;
-  }
+.success {
+  background-color: #79db75;
 }
