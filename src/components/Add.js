@@ -1,11 +1,63 @@
 import React, { Component } from 'react';
 import { addVideo } from '../api';
-import PropTypes from 'prop-types';
 
 import '../styles/add.scss';
 
+const parseYoutubeUrl = (url) => {
+  const match = url.match(/[?&]([^=#]+)=([^&#]*)/);
+  console.log(match);
+  return match && match[2];
+};
+
 class Add extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      showSending: false,
+      title: '',
+      url: '',
+      description: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  // sirve para guardar el valor del input según se va escribiendo
+  handleChange(field) {
+    return (event) => {
+      this.setState({
+        [field]: event.target.value,
+      });
+    };
+  }
+
+  validation(app) {
+    return app.title.length > 0 && app.url.length > 0 && app.description.length > 2 ? true : false;
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const { onClose } = this.props;
+    const token = parseYoutubeUrl(this.state.url || '');
+    if (this.validation(this.state) && token) {
+      this.setState({ showSending: true });
+      addVideo({
+        title: this.state.title,
+        description: this.state.description,
+        url: this.state.url,
+        thumbnail: `https://img.youtube.com/vi/${token}/maxresdefault.jpg`,
+        embed: `https://www.youtube.com/embed/${token}`,
+      }).then(onClose(true));
+    } else {
+      this.setState({
+        hasError: true,
+      });
+    }
+  }
+
   render() {
+    const { showSending, title, url, description, hasError } = this.state;
     const { onClose } = this.props;
     return (
       <div className='modal'>
@@ -13,16 +65,31 @@ class Add extends Component {
           <div className='modal-content-flex'>
             <h2> Crear nuevo Vídeo </h2>{' '}
             <span className='close' onClick={onClose(false)}>
-              <i class='zmdi zmdi-close'></i>
+              <i className='zmdi zmdi-close'></i>
             </span>
+            {showSending && <span className='success'> Enviando .... </span>}
+            {hasError && <div className='error'> Some fields are empty or contain an wrong values. </div>}
           </div>
+          <form>
+            <label>Title</label>
+            <input
+              type='text'
+              value={title}
+              onChange={this.handleChange('title')}
+              minLength='3'
+              maxLength='200'
+              required
+            />
+            <label>Url</label>
+            <input type='text' value={url} onChange={this.handleChange('url')} minLength='3' maxLength='200' required />
+            <label>Description</label>
+            <textarea value={description} onChange={this.handleChange('description')} required />
+            <input type='submit' onClick={this.handleSubmit} value='Submit' disabled={showSending} />
+          </form>
         </div>
       </div>
     );
   }
 }
 
-Add.propTypes = {
-  onClose: PropTypes.func.isRequired,
-};
 export default Add;

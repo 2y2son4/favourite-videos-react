@@ -38,10 +38,11 @@ class List extends Component {
     return true;
   }
 
-  handleAdd(e) {
-    e.preventDefault();
+  handleAdd(ev) {
+    ev.preventDefault();
     this.setState({ showAdd: true });
   }
+
   handleCloseAdd(reload) {
     return () => {
       if (reload) {
