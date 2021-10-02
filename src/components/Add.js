@@ -88,7 +88,7 @@ class Add extends PureComponent {
 
             <div className='modal-button-submit'>
               <input type='submit' onClick={this.handleSubmit} value='Submit' disabled={showSending} />
-              <i class='zmdi zmdi-upload'></i>
+              <i className='zmdi zmdi-upload'></i>
               <span>Submit</span>
             </div>
           </form>
