@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { addVideo } from '../api';
 
 import '../styles/add.scss';
 
 const parseYoutubeUrl = (url) => {
   const match = url.match(/[?&]([^=#]+)=([^&#]*)/);
-  console.log(match);
   return match && match[2];
 };
 
-class Add extends Component {
+class Add extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {

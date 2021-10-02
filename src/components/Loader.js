@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-// import Typed from 'type.js';
 
 import '../styles/loader.scss';
 

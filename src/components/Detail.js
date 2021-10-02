@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { getVideoDetail } from '../api';
 import Loader from './Loader';
 import Video from './Video';
 
-class Detail extends Component {
+class Detail extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,7 @@ class Detail extends Component {
     const { match } = this.props;
 
     if (error) return <p className='error'>{error.message}</p>;
-    if (isLoading) return <Loader message={`Cargando video #${match.params.id}`} speed={15} />;
+    if (isLoading) return <Loader message={`Showing video #${parseInt(match.params.id) + 1}`} speed={15} />;
 
     return (
       <React.Fragment>

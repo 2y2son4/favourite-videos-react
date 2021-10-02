@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 
 // components
@@ -7,7 +7,7 @@ import Footer from './Footer';
 // styles
 import '../styles/about.scss';
 
-class About extends Component {
+class About extends PureComponent {
   render() {
     return (
       <React.Fragment>

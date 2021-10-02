@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Root from './Root';
 
 // styles
 import '../styles/App.scss';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return <Root />;
   }
