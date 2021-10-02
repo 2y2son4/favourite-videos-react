@@ -14,7 +14,7 @@ class About extends Component {
         <Link to='/'>
           <div className='header-button-back'>
             <i className='zmdi zmdi-fast-rewind'></i>
-            <span>Back 🔙</span>
+            <span>Back</span>
           </div>
         </Link>
         <div className='about'>

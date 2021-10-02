@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 import { getVideoDetail } from '../api';
 import Loader from './Loader';
 import Video from './Video';
@@ -27,6 +28,12 @@ class Detail extends Component {
 
     return (
       <React.Fragment>
+        <Link to='/'>
+          <div className='header-button-back'>
+            <i className='zmdi zmdi-fast-rewind'></i>
+            <span>Back</span>
+          </div>
+        </Link>
         <div className='detail-container'>
           <Video title={video.title} embed={video.embed} />
           <div className='detail-summary'>
