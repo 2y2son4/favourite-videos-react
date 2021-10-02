@@ -14,7 +14,6 @@ const Header = () => (
       </div>
       <Link to='/about'>
         <div className='header-button-about'>
-          {' '}
           <i className='zmdi zmdi-more'></i>
           <span>About 👩‍💻</span>
         </div>

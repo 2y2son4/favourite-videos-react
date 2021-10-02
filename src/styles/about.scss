@@ -1,3 +1,40 @@
+@import './mixins.scss';
+
 .about {
   margin: 24px 24px 48px;
+
+  @include desktop {
+    margin: 24px auto;
+    max-width: 1024px;
+  }
+
+  &-text {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  &-img {
+    width: 100%;
+  }
+
+  &-container-grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 12px auto;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 50px));
+    grid-gap: 18px;
+  }
+
+  &-h4,
+  &-h5 {
+    margin: 0;
+  }
+
+  &-h4 {
+    margin-bottom: 24px;
+  }
+
+  &-h5 {
+    margin-bottom: 18px;
+  }
 }

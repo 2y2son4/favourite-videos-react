@@ -23,9 +23,9 @@
 
   &-button {
     &-add,
-    &-about {
+    &-about,
+    &-back {
       position: fixed;
-      bottom: 48px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -41,6 +41,7 @@
       padding: 12px;
       border: none;
       cursor: pointer;
+      z-index: 2;
 
       &:hover {
         background-color: #79db75;
@@ -70,10 +71,17 @@
 
     &-add {
       left: 36px;
+      bottom: 48px;
     }
 
     &-about {
       background-color: darkblue;
+      right: 36px;
+      bottom: 48px;
+    }
+
+    &-back {
+      top: 24px;
       right: 36px;
     }
   }
