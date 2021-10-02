@@ -16,6 +16,7 @@
   }
 
   &-title {
+    text-align: center;
     padding: 10px;
     margin-top: 12px;
     background-color: white;
@@ -35,9 +36,3 @@
     filter: blur(0px);
   }
 }
-
-// @media (min-width: 320px) and (max-width: 580px) {
-//   .preview-image {
-//     width: 300px;
-//   }
-// }
