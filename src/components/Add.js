@@ -62,12 +62,13 @@ class Add extends PureComponent {
       <div className='modal'>
         <div className='modal-content'>
           <div className='modal-content-flex'>
-            <h2> Crear nuevo Vídeo </h2>{' '}
+            <h2>Add new video</h2>{' '}
             <span className='close' onClick={onClose(false)}>
               <i className='zmdi zmdi-close'></i>
             </span>
-            {showSending && <span className='success'> Enviando .... </span>}
-            {hasError && <div className='error'> Some fields are empty or contain an wrong values. </div>}
+            {showSending
+              ? showSending && <span className='success'> Saving .... </span>
+              : hasError && <div className='error'> Some fields are empty or contain wrong values. </div>}
           </div>
           <form>
             <label>Title</label>
@@ -83,7 +84,12 @@ class Add extends PureComponent {
             <input type='text' value={url} onChange={this.handleChange('url')} minLength='3' maxLength='200' required />
             <label>Description</label>
             <textarea value={description} onChange={this.handleChange('description')} required />
-            <input type='submit' onClick={this.handleSubmit} value='Submit' disabled={showSending} />
+
+            <div className='modal-button-submit'>
+              <input type='submit' onClick={this.handleSubmit} value='Submit' disabled={showSending} />
+              <i class='zmdi zmdi-upload'></i>
+              <span>Submit</span>
+            </div>
           </form>
         </div>
       </div>

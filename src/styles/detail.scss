@@ -11,15 +11,21 @@
 
   &-summary {
     padding: 0 10px;
-  }
 
-  &-summary p {
-    text-indent: 0;
-    margin: 0 0 26px 0;
+    p {
+      text-indent: 0;
+      margin: 0 0 40px 0;
+    }
   }
 
   &-title {
-    margin: 52px 0 26px 0;
-    font-size: 31px;
+    margin: 24px 0 24px 0;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 580px) {
+  .detail-summary p {
+    padding-bottom: 80px;
   }
 }

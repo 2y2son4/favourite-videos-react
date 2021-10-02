@@ -236,7 +236,7 @@ class About extends PureComponent {
             <h4 className='about-h4'> ; </h4>
           </code>
 
-          <code>
+          <code className='projects'>
             <h4 className='about-h4'>🔭 let projects = [</h4>
             <div
               className='grid-container
@@ -293,7 +293,7 @@ class About extends PureComponent {
             <h4 className='about-h4'> ]; </h4>
           </code>
 
-          <code>
+          <code className='statistics'>
             <h4 className='about-h4'>📈 let statistics =</h4>
             <div
               className='grid-container

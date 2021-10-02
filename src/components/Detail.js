@@ -5,6 +5,9 @@ import { getVideoDetail } from '../api';
 import Loader from './Loader';
 import Video from './Video';
 
+import '../styles/detail.scss';
+import Footer from './Footer';
+
 class Detail extends PureComponent {
   constructor(props) {
     super(props);
@@ -41,6 +44,7 @@ class Detail extends PureComponent {
             <p>{video.description}</p>
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     );
   }

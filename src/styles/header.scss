@@ -25,7 +25,9 @@
     &-add,
     &-about,
     &-back {
+      background-color: #d6006b;
       position: fixed;
+      z-index: 1;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -45,6 +47,7 @@
         background-color: #79db75;
         border-radius: 10px;
         width: 120px;
+
         span {
           display: initial;
         }
@@ -79,22 +82,35 @@
     }
 
     &-add {
-      background-color: #d6006b;
       left: 36px;
       bottom: 48px;
     }
 
-    &-about {
-      background-color: darkblue;
+    &-about,
+    &-back {
       right: 36px;
       bottom: 48px;
     }
+  }
+}
 
-    &-back {
-      background-color: darkblue;
+@media (min-width: 320px) and (max-width: 580px) {
+  .header {
+    &-content {
+      display: block;
+    }
 
-      top: 24px;
-      right: 36px;
+    &-title-text {
+      display: block;
+      width: initial;
+      text-align: center;
+      margin: 0;
+    }
+
+    &-button-back {
+      bottom: 24px;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }

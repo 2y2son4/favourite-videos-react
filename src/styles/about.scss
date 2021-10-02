@@ -23,6 +23,9 @@
     margin: 12px auto;
     grid-template-columns: repeat(auto-fill, minmax(120px, 50px));
     grid-gap: 18px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
   }
 
   &-h4,
@@ -36,5 +39,23 @@
 
   &-h5 {
     margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 580px) {
+  .projects {
+    > .grid-container > a > img {
+      width: 300px;
+    }
+  }
+
+  .statistics {
+    > .grid-container > img {
+      width: 300px;
+    }
+
+    > .about-h4 {
+      padding-bottom: 40px;
+    }
   }
 }

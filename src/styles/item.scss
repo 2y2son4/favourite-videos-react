@@ -10,8 +10,8 @@
     cursor: pointer;
 
     &:hover {
-      box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px,
-        rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+      box-shadow: #ffe6f2 0px 0px 0px 3px, #ffb3d9 0px 0px 0px 6px, #ff66b3 0px 0px 0px 9px, #ff1a8c 0px 0px 0px 12px,
+        #d6006b 0px 0px 0px 15px;
     }
   }
 
@@ -35,3 +35,9 @@
     filter: blur(0px);
   }
 }
+
+// @media (min-width: 320px) and (max-width: 580px) {
+//   .preview-image {
+//     width: 300px;
+//   }
+// }
