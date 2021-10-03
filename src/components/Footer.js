@@ -7,13 +7,31 @@ import '../styles/footer.scss';
 const Footer = () => {
   return (
     <footer className='footer'>
-      <span className='footer__span'>
+      <p className='footer__paragraph'>
         Design & code by {''}
-        <a className='footer__span--link' href='https://github.com/2y2son4' target='_blank' rel='noreferrer'>
+        <a className='footer__paragraph--link' href='https://github.com/2y2son4' target='_blank' rel='noreferrer'>
           2y2son4{'  '}
         </a>
-        👽
-      </span>
+        👽{' '}
+      </p>
+      <p className='footer__paragraph'>
+        && Thanks to
+        <a className='footer__paragraph--link' href='https://codely.tv/' target='_blank' rel='noreferrer'>
+          {' '}
+          CodelyTV{' '}
+        </a>
+      </p>
+      <p className='footer__paragraph'>
+        || You can check the code{' '}
+        <a
+          className='footer__paragraph--link'
+          href='https://github.com/2y2son4/favourite-videos-react'
+          target='_blank'
+          rel='noreferrer'
+        >
+          HERE{' '}
+        </a>
+      </p>
     </footer>
   );
 };
